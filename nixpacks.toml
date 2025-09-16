@@ -1,0 +1,14 @@
+[variables]
+PYTHON_VERSION = "3.11"
+
+[phases.setup]
+nixPkgs = ["python311", "gcc", "pkg-config", "freetype", "libpng", "libjpeg"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[phases.build]
+cmds = ["echo 'Build completed'"]
+
+[start]
+cmd = "python railway_crypto_bot.py"
